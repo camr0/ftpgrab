@@ -58,6 +58,7 @@ You can override this using the [`--config` flag or `CONFIG` env var](../usage/c
       retry: 3
       hideSkipped: false
       tempFirst: false
+      tempDir: /tmp
       createBaseDir: false
     
     notif:
@@ -116,6 +117,7 @@ All configuration from file can be transposed into environment variables. As an 
       retry: 3
       hideSkipped: false
       tempFirst: false
+      tempDir: /tmp
       createBaseDir: false
     
     notif:
@@ -157,6 +159,7 @@ Can be transposed to:
     FTPGRAB_DOWNLOAD_RETRY=3
     FTPGRAB_DOWNLOAD_HIDESKIPPED=false
     FTPGRAB_DOWNLOAD_TEMPFIRST=false
+    FTPGRAB_DOWNLOAD_TEMPDIR=/tmp
     FTPGRAB_DOWNLOAD_CREATEBASEDIR=false
     
     FTPGRAB_NOTIF_MAIL_HOST=smtp.example.com

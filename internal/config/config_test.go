@@ -71,6 +71,7 @@ func TestLoadFile(t *testing.T) {
 					Retry:         3,
 					HideSkipped:   utl.NewFalse(),
 					TempFirst:     utl.NewFalse(),
+					TempDir:			 "./tmp"
 					CreateBaseDir: utl.NewFalse(),
 				},
 				Notif: &Notif{

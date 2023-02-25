@@ -21,6 +21,7 @@ type Download struct {
 	Retry         int         `yaml:"retry,omitempty" json:"retry,omitempty"`
 	HideSkipped   *bool       `yaml:"hideSkipped,omitempty" json:"hideSkipped,omitempty"`
 	TempFirst     *bool       `yaml:"tempFirst,omitempty" json:"tempFirst,omitempty"`
+	TempDir         string      `yaml:"tempDir,omitempty" json:"tempDir,omitempty"`
 	CreateBaseDir *bool       `yaml:"createBaseDir,omitempty" json:"createBaseDir,omitempty"`
 }
 
@@ -40,5 +41,6 @@ func (s *Download) SetDefaults() {
 	s.Retry = 3
 	s.HideSkipped = utl.NewFalse()
 	s.TempFirst = utl.NewFalse()
+	s.TempDir = ""
 	s.CreateBaseDir = utl.NewFalse()
 }

@@ -16,6 +16,7 @@
       retry: 3
       hideSkipped: false
       tempFirst: false
+      tempDir: /tmp
       createBaseDir: false
     ```
 
@@ -163,6 +164,12 @@ First download the files to a temporary location and then move them to the final
 
 !!! abstract "Environment variables"
     * `FTPGRAB_DOWNLOAD_TEMPFIRST`
+
+## `tempDir`
+
+set a custom temporary directory to download files. (tempFist must be enabled).
+
+!!! example TODO
 
 ## `createBaseDir`
 

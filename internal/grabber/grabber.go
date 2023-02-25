@@ -50,7 +50,13 @@ func New(dlConfig *config.Download, dbConfig *config.Db, serverConfig *config.Se
 	}
 
 	// Temp dir to download files
-	tempdir, err := os.MkdirTemp("", ".ftpgrab.*")
+	tempdir := ""
+	if dlConfig.TempDir == "" {
+		tempdir, err = os.MkdirTemp("", ".ftpgrab.*")
+	} else {
+		_ = os.Mkdir(dlConfig.TempDir, 0766) // TODO: this is kinda sketch
+		tempdir, err = os.MkdirTemp(dlConfig.TempDir, ".ftpgrab.*")
+	}
 	if err != nil {
 		return nil, errors.Wrap(err, "Cannot create temp dir")
 	}
