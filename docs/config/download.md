@@ -167,7 +167,7 @@ First download the files to a temporary location and then move them to the final
 
 ## `tempDir`
 
-set a custom temporary directory to download files. (tempFist must be enabled).
+set a custom temporary directory to download files. (tempFirst must be enabled).
 
 !!! example TODO
 
